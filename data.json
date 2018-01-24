@@ -1,0 +1,10 @@
+[
+  {
+    "context": "/user",
+    "include": "user.json"
+  },
+  {
+    "context": "/todo",
+    "include": "todo.json"
+  }
+]

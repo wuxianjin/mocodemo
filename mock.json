@@ -1,0 +1,110 @@
+[
+  {
+    "request": {
+      "method": "get",
+      "uri": "/user/getUser",
+      "queries": {
+        "name": "jack"
+      }
+    },
+    "response": {
+      "text": "I'm get dog"
+    }
+  },
+  {
+    "request": {
+      "method": "post",
+      "uri": "/xianjin",
+      "forms": {
+        "name": "jack"
+      }
+    },
+    "response": {
+      "text": "Hi. you get jack data"
+    }
+  },
+  {
+    "request": {
+      "uri": "/login",
+      "method": "get"
+    },
+    "response": {
+      "status": 200,
+      "cookies": {
+        "login": "true"
+      },
+      "headers": {
+        "content-type": "application/json"
+      },
+      "json": {
+        "username": "wuxianjin",
+        "errcode": "0",
+        "errstr": "fail"
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/chongdingxiang"
+    },
+    "redirectTo": "https://www.bdp.cn"
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/yanchi"
+    },
+    "response": {
+      "latency": {
+        "duration": 3,
+        "unit": "second"
+      },
+      "text": "I'm get dog yanchi le 3 miao"
+    }
+  },
+  {
+    "request": {
+      "uri": "/moban"
+    },
+    "response": {
+      "text": {
+        "template": "username: ${req.queries['name']}"
+      }
+    }
+  },
+  {
+    "request": {
+      "uri": "/event"
+    },
+    "response": {
+      "text": "event test"
+    },
+    "on": {
+      "complete": {
+        "get": {
+          "url": "http://amqa.bdp.cn/api/user/login?username=wuxianjin&password=bdp888888"
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "uri": "/event2"
+    },
+    "response": {
+      "text": "event2 test"
+    },
+    "on": {
+      "complete": {
+        "async": "true",
+        "latency": 5000,
+        "post": {
+          "url": "https://www.baidu.com",
+          "content": "content"
+        }
+      }
+    }
+  },
+
+]

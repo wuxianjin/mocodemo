@@ -1,0 +1,71 @@
+[
+  {
+    "request": {
+      "method": "get",
+      "uri": "/test"
+    },
+    "response": {
+      "text": "I'm get"
+    }
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/user/getUser",
+      "queries": {
+        "name": "jack"
+      }
+    },
+    "response": {
+      "text": "I'm get dog"
+    }
+  },
+  {
+    "request": {
+      "method": "post",
+      "uri": "/test"
+    },
+    "response": {
+      "text": "I'm post"
+    }
+  },
+  {
+    "request": {
+      "method": "post",
+      "uri": "/xianjin",
+      "forms": {
+        "name": "jack"
+      }
+    },
+    "response": {
+      "text": "Hi. you get jack data"
+    }
+  },
+  {
+    "request": {
+      "uri": "/login",
+      "method": "post"
+    },
+    "response": {
+      "status": 200,
+      "cookies": {
+        "login": "true"
+      },
+      "headers": {
+        "content-type": "application/json"
+      },
+      "json": {
+        "username": "wuxianjin",
+        "errcode": "0",
+        "errstr": "fail"
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/redirect"
+    },
+    "redirectTo": "https://www.bdp.cn"
+  }
+]

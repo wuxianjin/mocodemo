@@ -1,0 +1,10 @@
+[
+  {
+    "request": {
+      "uri": "/getAll"
+    },
+    "response": {
+      "text": "这是获取用户所有Todo的请求"
+    }
+  }
+]
